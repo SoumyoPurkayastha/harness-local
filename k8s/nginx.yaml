@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pipe37365-nginx
+  labels:
+    app: pipe37365
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pipe37365
+  template:
+    metadata:
+      labels:
+        app: pipe37365
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.25-alpine
+          ports:
+            - containerPort: 80
