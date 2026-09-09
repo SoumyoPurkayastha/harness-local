@@ -14,6 +14,8 @@ spec:
     metadata:
       labels:
         app: pipe37365
+      annotations:
+        pipe37365/execution: <+pipeline.executionId>
     spec:
       containers:
         - name: nginx
@@ -28,3 +30,6 @@ spec:
             periodSeconds: 5
             timeoutSeconds: 2
             failureThreshold: 3
+          command: ["/bin/sh", "-c"]
+          args:
+            - sleep 90; exec nginx -g 'daemon off;'
