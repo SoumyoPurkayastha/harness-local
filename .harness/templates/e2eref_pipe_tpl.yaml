@@ -1,0 +1,11 @@
+template:
+  inputs:
+    fail: { type: string }
+  pipeline:
+    stages:
+      - id: s1
+        runtime: shell
+        steps:
+          - id: print
+            run: { script: echo "PIPE=main FAIL=<+inputs.fail>" }
+spec: { type: pipeline }
