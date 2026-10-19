@@ -1,0 +1,9 @@
+pipeline:
+  stages:
+    - id: s1
+      template:
+        uses: e2eref_stage_tpl@v1
+        ref: e2e-ref-feature
+        with:
+          foo: c5foo
+          featOnly: c5feat
