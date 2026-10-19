@@ -1,0 +1,7 @@
+template:
+  stage:
+    runtime: shell
+    steps:
+      - id: print
+        run: { script: echo TPL=main }
+spec: { type: stage }
