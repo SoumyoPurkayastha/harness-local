@@ -1,0 +1,9 @@
+template:
+  step:
+    group:
+      steps:
+        - id: print
+          run:
+            script: echo "GRP=main"
+spec:
+  type: step
