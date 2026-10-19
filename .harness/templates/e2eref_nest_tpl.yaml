@@ -1,0 +1,8 @@
+template:
+  stage:
+    runtime: shell
+    steps:
+      - id: inner
+        action:
+          uses: e2eref_step_tpl@v1
+spec: { type: stage }
