@@ -5,4 +5,5 @@ template:
       - id: inner
         action:
           uses: e2eref_step_tpl@v1
+          ref: e2e-ref-other
 spec: { type: stage }
