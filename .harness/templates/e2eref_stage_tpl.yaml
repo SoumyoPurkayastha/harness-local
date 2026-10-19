@@ -1,7 +1,10 @@
 template:
+  inputs:
+    foo: { type: string }
+    mainOnly: { type: string }
   stage:
     runtime: shell
     steps:
       - id: print
-        run: { script: echo TPL=main }
+        run: { script: echo "TPL=main FOO=<+inputs.foo>" }
 spec: { type: stage }
