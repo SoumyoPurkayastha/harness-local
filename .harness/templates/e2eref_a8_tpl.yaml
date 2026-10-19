@@ -1,0 +1,9 @@
+template:
+  stage:
+    runtime: shell
+    steps:
+      - id: t
+        action:
+          uses: e2eref_step_tpl@v1
+          ref: e2e-ref-feature
+spec: { type: stage }
