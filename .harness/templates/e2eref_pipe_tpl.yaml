@@ -7,5 +7,7 @@ template:
         runtime: shell
         steps:
           - id: print
-            run: { script: echo "PIPE=main FAIL=<+inputs.fail>" }
+            run: { script: echo "PIPE=feature FAIL=<+inputs.fail>" }
+          - id: maybe_fail
+            run: { script: 'if [ "<+inputs.fail>" = "yes" ]; then exit 1; fi' }
 spec: { type: pipeline }
