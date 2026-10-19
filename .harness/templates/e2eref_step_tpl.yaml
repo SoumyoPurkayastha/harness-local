@@ -1,4 +1,4 @@
 template:
   step:
-    run: { script: echo "STEP=main" }
+    run: { script: echo "STEP=other" }
 spec: { type: step }
